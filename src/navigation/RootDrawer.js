@@ -58,4 +58,4 @@ const RootDrawer =createDrawerNavigator({
     }
 });
 
-export default createAppContainer(RootDrawer);;
+export default createAppContainer(RootDrawer);

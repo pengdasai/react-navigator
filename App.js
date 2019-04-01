@@ -9,8 +9,17 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
 //import RootTabs from './src/navigation/RootTabs'
-import RootStack from './src/navigation/StackNavigatorDemo01'
+//import RootStack from './src/navigation/StackNavigatorDemo01'
 //import RootDrawer from './src/navigation/RootDrawer'
+//import TabNavigator from './src/navigation/TabNavigator'
+//import FetchFDemo from './src/comments/FetchDemo'
+//import RootTabs from "./src/navigation/RootTabs";
+//import FetchDemo from "./src/comments/FetchDemo";
+//import Template from './src/comments/Template';
+import Index from './src/news/Index'
+//import SwiperDemo from './src/comments/SwiperDemo'
+//import MyDrawerNavigator from './src/navigation/MyDrawerNavigator'
+import FlatListDemo from './src/comments/FlatListDemo'
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
   android:
@@ -23,7 +32,7 @@ export default class App extends Component<Props> {
   render() {
     return (
 
-        <RootStack/>
+          <Index/>
 
     );
   }
