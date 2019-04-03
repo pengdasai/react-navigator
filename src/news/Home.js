@@ -1,9 +1,15 @@
 import React from 'react';
-import { View, Text ,Image,Alert,Dimensions,TouchableOpacity,FlatList,} from 'react-native';
+import { View, Text ,Image,Alert,Dimensions,TouchableOpacity,FlatList,AsyncStorage} from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 var newsData = require('../../assets/data/news.json')
 const { width, height } = Dimensions.get('window');//获取手机的宽和高
 export default class Home extends React.Component{
+
+    componentWillMount(){
+        //本地存储数据
+        AsyncStorage.setItem('name','新开普')
+    }
+
     goDetail(){
         //Alert.alert('去新闻详情页面！')
         this.props.navigation.navigate('NewsPage',{aid:3})

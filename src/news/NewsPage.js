@@ -25,11 +25,12 @@ export default class NewsPage extends Component{
     // }
 
     render(){
-        Alert.alert(this.props.navigation.state.params.aid);
+        //Alert.alert(this.props.navigation.state.params.aid);
         return(
             <View>
                 <Text style={{fontSize:30}}>
                     Hello！
+                    {this.props.navigation.getParam('aid','404')}
                 </Text>
             </View>
         )
