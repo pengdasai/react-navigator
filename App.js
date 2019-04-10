@@ -16,12 +16,13 @@ import {Platform, StyleSheet, Text, View} from 'react-native';
 //import RootTabs from "./src/navigation/RootTabs";
 //import FetchDemo from "./src/comments/FetchDemo";
 //import Template from './src/comments/Template';
-//import Index from './src/news/Index'
+//import IndexPage from './src/news/IndexPage'
 //import SwiperDemo from './src/comments/SwiperDemo'
 //import MyDrawerNavigator from './src/navigation/MyDrawerNavigator'
 //import FlatListDemo from './src/comments/FlatListDemo'
 //-----------------------------------------------------
-import Index from './src/mydemo/Index'
+import IndexPage from './src/smartclass/IndexPage'
+import First from './src/tsdemo/first'
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
   android:
@@ -33,7 +34,7 @@ type Props = {};
 export default class App extends Component<Props> {
   render() {
     return (
-        <Index/>
+        <IndexPage/>
     );
   }
 }

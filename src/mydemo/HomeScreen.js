@@ -4,7 +4,7 @@ import { createBottomTabNavigator,createAppContainer } from 'react-navigation'; 
 import Ionicons from 'react-native-vector-icons/Ionicons'; // Supported builtin module
 import Main from './Tab/Main';
 import Order from './Tab/Order';
-import MyCenter from './Tab/MyCenter'
+import MyCenter from './Tab/MyCenter';
 
 const HomeScreen = createBottomTabNavigator({
     Home: {

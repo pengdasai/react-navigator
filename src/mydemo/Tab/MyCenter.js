@@ -61,13 +61,95 @@ export default class MyCenter extends React.Component{
                     <View style={styles.othersitem}>
                         <Ionicons
                             name={'ios-home'}
-                            size={30}
+                            size={22}
+                            style={[styles.othericon,styles.icon1]}
                         />
-                        <View>
-                            <Text></Text>
-                            <Text> > </Text>
+                        <View style={{flexDirection:'row',alignItems:'center',width:'90%',justifyContent:'space-between',marginRight:10,}}>
+                            <Text style={{fontSize:18,color:'rgba(0,0,0,0.3)'}}>我的地址</Text>
+                            <Text style={{fontSize:18,color:'rgba(0,0,0,0.3)'}}> >>> </Text>
                         </View>
                     </View>
+
+                    <View style={styles.othersitem}>
+                        <Ionicons
+                            name={'ios-home'}
+                            size={22}
+                            style={[styles.othericon,styles.icon2]}
+                        />
+                        <View style={{flexDirection:'row',alignItems:'center',width:'90%',justifyContent:'space-between',marginRight:10}}>
+                            <Text style={{fontSize:18,color:'rgba(0,0,0,0.3)'}}>推荐有奖</Text>
+                            <Text style={{fontSize:18,color:'rgba(0,0,0,0.3)'}}> >>> </Text>
+                        </View>
+                    </View>
+
+                    <View style={styles.othersitem}>
+                        <Ionicons
+                            name={'ios-home'}
+                            size={22}
+                            style={[styles.othericon,styles.icon3]}
+                        />
+                        <View style={{flexDirection:'row',alignItems:'center',width:'90%',justifyContent:'space-between',marginRight:10}}>
+                            <Text style={{fontSize:18,color:'rgba(0,0,0,0.3)'}}>积分商城</Text>
+                            <Text style={{fontSize:18,color:'rgba(0,0,0,0.3)'}}> >>> </Text>
+                        </View>
+                    </View>
+
+                    <View style={styles.othersitem}>
+                        <Ionicons
+                            name={'ios-home'}
+                            size={22}
+                            style={[styles.othericon,styles.icon4]}
+                        />
+                        <View style={{flexDirection:'row',alignItems:'center',width:'90%',justifyContent:'space-between',marginRight:10}}>
+                            <Text style={{fontSize:18,color:'rgba(0,0,0,0.3)'}}>快速配送</Text>
+                            <Text style={{fontSize:18,color:'rgba(0,0,0,0.3)'}}> >>> </Text>
+                        </View>
+                    </View>
+                </View>
+
+                {/*意见反馈和更多*/}
+                <View style={styles.others}>
+                    <View style={styles.othersitem}>
+                        <Ionicons
+                            name={'ios-home'}
+                            size={22}
+                            style={[styles.othericon,styles.icon6]}
+                        />
+                        <View style={{flexDirection:'row',alignItems:'center',width:'90%',justifyContent:'space-between',marginRight:10,}}>
+                            <Text style={{fontSize:18,color:'rgba(0,0,0,0.3)'}}>意见反馈</Text>
+                            <Text style={{fontSize:18,color:'rgba(0,0,0,0.3)'}}> >>> </Text>
+                        </View>
+                    </View>
+
+                    <View style={styles.othersitem}>
+                        <Ionicons
+                            name={'ios-home'}
+                            size={22}
+                            style={[styles.othericon,styles.icon7]}
+                        />
+                        <View style={{flexDirection:'row',alignItems:'center',width:'90%',justifyContent:'space-between',marginRight:10,}}>
+                            <Text style={{fontSize:18,color:'rgba(0,0,0,0.3)'}}>更多</Text>
+                            <Text style={{fontSize:18,color:'rgba(0,0,0,0.3)'}}> >>> </Text>
+                        </View>
+                    </View>
+                </View>
+                {/*客服*/}
+                <View style={styles.service}>
+                    <Ionicons
+                        name={'ios-home'}
+                        size={30}
+                        style={[styles.othericon,styles.icon7]}
+                    />
+                    <Text style={{paddingLeft:10,}}>联系我...</Text>
+                </View>
+                {/*填充*/}
+                <View style={styles.service}>
+                    <Ionicons
+                        name={'ios-home'}
+                        size={30}
+                        style={[styles.othericon,styles.icon7]}
+                    />
+                    <Text style={{paddingLeft:10,}}>版权所有@newcapec</Text>
                 </View>
             </View>
         )
@@ -126,8 +208,8 @@ let styles = StyleSheet.create({
         alignItems:'center',
         justifyContent: 'space-between',
         height:50,
-        borderTopWidth:2,
-        borderTopColor:'rgba(0,0,0,0.30)'
+        // borderTopWidth:6,
+        // borderTopColor:'rgba(0,0,0,0.10)'
     },
     wleft:{
         flexDirection:'row',
@@ -138,8 +220,8 @@ let styles = StyleSheet.create({
         height:60,
         width:'100%',
         flexDirection:'row',
-        borderTopWidth: 2,
-        borderTopColor: 'rgba(0,0,0,0.30)',
+        borderTopWidth: 8,
+        borderTopColor: '#F3F7FA',
         alignItems:'center'
     },
     accounttitle:{
@@ -148,13 +230,48 @@ let styles = StyleSheet.create({
         alignItems:'center'
     },
     others:{
-        boderBottomWidth:8,
+        borderBottomWidth:8,
         borderBottomColor:'#F3F7FA',
     },
     othersitem:{
         width:'100%',
-        height:40,
+        height:60,
         flexDirection:'row',
-        alignItems:'center'
+        alignItems:'center',
+        justifyContent:'space-between',
+        borderBottomWidth: 1,
+        borderBottomColor: 'rgba(0,0,0,0.1)',
+    },
+    othericon:{
+        marginLeft:10,
+    },
+    icon1:{
+        color:'#32caea'
+    },
+    icon2:{
+        color:'#ff9384'
+    },
+    icon3:{
+        color:'#47d862'
+    },
+    icon4:{
+        color:'#32caea'
+    },
+    icon5:{
+        color:'#65a6ff'
+    },
+    icon6:{
+        color:'#32adca'
+    },
+    icon7:{
+        color:'#98adca'
+    },
+    service:{
+        height:60,
+        flexDirection:'row',
+        justifyContent:'center',
+        alignItems:'center',
+        borderBottomWidth:8,
+        borderBottomColor:'#F3F7FA',
     }
 });

@@ -3,7 +3,7 @@ import { View, Text, Button } from 'react-native';
 import { createStackNavigator ,createAppContainer} from 'react-navigation'; // 1.0.0-beta.14
 import HomeScreen from './HomeScreen';// TabScreen-->HomeScreen
 import DetailsScreen from './DetailScreen';// PageScreen-->DetailScreen
-
+import LoginPage from './Login/LoginPage'
 const Index = createStackNavigator({
     Home: {
         screen: HomeScreen,
@@ -17,6 +17,9 @@ const Index = createStackNavigator({
             header:null
         },
     },
+    Login:{
+        screen:LoginPage,
+    }
 });
 
 const AppContainer = createAppContainer(Index);
