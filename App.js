@@ -20,6 +20,13 @@ import {Platform, StyleSheet, Text, View} from 'react-native';
 //import SwiperDemo from './src/comments/SwiperDemo'
 //import MyDrawerNavigator from './src/navigation/MyDrawerNavigator'
 //import FlatListDemo from './src/comments/FlatListDemo'
+import AnimationDemo01 from './src/comments/AnimationDemo01'
+import AnimationDemo02 from './src/comments/AnimationDemo02'
+import AnimationDemo03 from './src/comments/AnimationDemo03'
+import AnimationDemo04 from './src/comments/AnimationDemo04'
+import AnimationDemo05 from './src/comments/AnimationDemo05'
+import AnimationDemo06 from './src/comments/AnimationDemo06'
+import AnimationDemo07 from './src/comments/AnimationDemo07'
 //-----------------------------------------------------
 import IndexPage from './src/smartclass/IndexPage'
 import First from './src/tsdemo/first'
@@ -34,7 +41,7 @@ type Props = {};
 export default class App extends Component<Props> {
   render() {
     return (
-        <IndexPage/>
+        <AnimationDemo07/>
     );
   }
 }

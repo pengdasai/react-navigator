@@ -4,6 +4,13 @@ var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
 export default class IndexPage extends React.Component{
 
+    constructor(props:string){
+        super(props);
+        this.state={
+            msg:''
+        }
+    }
+
     render(){
         return(
             <View style={{
