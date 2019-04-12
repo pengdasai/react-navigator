@@ -1,5 +1,5 @@
 /**
- * X轴切换/渐变
+ * 渐变
  */
 import React, {Component} from 'react';
 import {
@@ -9,46 +9,32 @@ import {
     StyleSheet,
     Text
 } from 'react-native';
-export default class AnimationDemo01 extends Component{
-    constructor(props){
+export default class AnimationDemo01 extends Component {
+    constructor(props) {
         super(props);
-        this.state={
-            fadeInOpacity: new Animated.Value(0)
-        }
+        this.state = {
+            fadeAnim: new Animated.Value(0), //设置初始值
+        };
     }
     componentDidMount() {
-        Animated.timing(this.state.fadeInOpacity, {
-            toValue: 1, // 目标值
-            duration: 2500, // 动画时间
-            //easing: Easing.linear // 缓动函数
-        }).start();
+        Animated.timing(
+            this.state.fadeAnim,//初始值
+            {toValue: 1}//结束值
+        ).start();//开始
     }
     render() {
         return (
-            <Animated.View style={[styles.demo, {
-                transform:[
-                    {
-                        rotateX:this.state.fadeInOpacity.interpolate({
-                            inputRange:[0,1],
-                            outputRange:['0deg','360deg']
-                        })
-                    }
-                ]
-            }]}>
-                <Text style={styles.text}>悄悄的，我出现了</Text>
-            </Animated.View>
+            <View style={styles.container}>
+                <Animated.Text style={{fontSize:30,opacity: this.state.fadeAnim}}>
+                    Welcome to React Native!
+                </Animated.Text>
+            </View>
         );
     }
 }
 
 var styles = StyleSheet.create({
-    demo: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: 'white',
-    },
-    text: {
-        fontSize: 30
+    container:{
+        alignItems:'center'
     }
 });

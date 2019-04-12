@@ -1,13 +1,11 @@
 import React, {Component} from 'react';
 import {FlatList, Text, View,Image,Dimensions,Button,Animated,StyleSheet} from 'react-native';
-var width = Dimensions.get('window').width;
-var height = Dimensions.get('window').height;
-export default class FlatListDemo extends Component{
+export default class FlatListDemo03 extends Component{
 
     constructor(){
         super();
         this.state={
-            btnAnimVal:new Animated.Value(0), //初始值
+            fadeAnim: new Animated.Value(0), //设置初始值
             list:[
                 {
                     aid:'1',title:'新开普',thump:'http://img5.duitang.com/uploads/item/201512/18/20151218165511_AQW4B.jpeg'
@@ -17,15 +15,9 @@ export default class FlatListDemo extends Component{
     }
 
     doSomething = ({item})=>(
-        <Animated.View style={[styles.demo, {
-            transform: [
-                {
-                    translateX:this.state.btnAnimVal  //移动Y轴
-                },
-            ]
-        }]}>
-            <Image source={{uri:item.thump}} style={{width:100,height:100,borderRadius:40,marginTop:10}}/>
-            <Text style={{marginLeft:20,fontSize:20}}>{item.title}</Text>
+        <Animated.View style={styles.demo}>
+            <Animated.Image source={{uri:item.thump}} style={{width:100,height:100,borderRadius:40,marginTop:10,opacity: this.state.fadeAnim}}/>
+            <Animated.Text style={{marginLeft:20,fontSize:20,opacity: this.state.fadeAnim}}>{item.title}</Animated.Text>
         </Animated.View>
     );
 
@@ -45,15 +37,11 @@ export default class FlatListDemo extends Component{
                             {
                                 aid:'3',title:'新开普',thump:'http://img5.duitang.com/uploads/item/201512/18/20151218165511_AQW4B.jpeg'
                             },
-                            {
-                                aid:'2',title:'新开普',thump:'http://img5.duitang.com/uploads/item/201512/18/20151218165511_AQW4B.jpeg'
-                            }
                         ];
-                        Animated.spring(this.state.btnAnimVal,{
-                            toValue:30,//结束值
-                            friction:1,//摩擦力
-                            tension:70,//弹跳速度值
-                        }).start();
+                        Animated.timing(
+                            this.state.fadeAnim,//初始值
+                            {toValue: 1}//结束值
+                        ).start();//开始
                         this.setState({
                             list:data
                         })
@@ -68,5 +56,4 @@ var styles = StyleSheet.create({
         flexDirection:'row',
         alignItems:'center',
     }
-
 });

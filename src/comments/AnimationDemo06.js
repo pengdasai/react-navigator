@@ -50,10 +50,6 @@ export default class AnimationDemo06 extends Component{
                     inputRange:[0,1],
                     outputRange:[0, width - 100]
                 }),
-                right: this.state.right3.interpolate({
-                    inputRange:[0,1],
-                    outputRange:[0, width - 100]
-                }),
                 transform:[
                     {rotateZ: this.state.rotation3.interpolate({
                             inputRange:[0,1],

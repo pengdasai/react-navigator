@@ -22,7 +22,6 @@ export default class AnimationDemo07 extends Component{
     componentDidMount() {
         //串行执行
         Animated.sequence([
-            // 并行执行（滚动，同时旋转）
             Animated.decay(this.state.left3, {
                 velocity: 1,// 起始速度，必填参数。
                 deceleration:0.99//速度衰减比例，默认为0.997。

@@ -44,7 +44,7 @@ export default class AnimationDemo02 extends Component{
                     inputRange: [0,1],
                     outputRange: [12,26]
                 })
-            }}>我骑着七彩祥云出现了💨
+            }}>我出现了💨
                 </Animated.Text>
             </Animated.View>
         );
