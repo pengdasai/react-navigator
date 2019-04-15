@@ -1,3 +1,6 @@
+/**
+ *左右晃动
+ */
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View,Alert} from 'react-native';
 

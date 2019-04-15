@@ -1,5 +1,8 @@
+/**
+ * 渐显
+ */
 import React, {Component} from 'react';
-import {FlatList, Text, View,Image,Dimensions,Button,Animated,StyleSheet} from 'react-native';
+import {FlatList, Text, View, Image, Dimensions, Button, Animated, StyleSheet, Easing} from 'react-native';
 export default class FlatListDemo03 extends Component{
 
     constructor(){
@@ -7,9 +10,9 @@ export default class FlatListDemo03 extends Component{
         this.state={
             fadeAnim: new Animated.Value(0), //设置初始值
             list:[
-                {
-                    aid:'1',title:'新开普',thump:'http://img5.duitang.com/uploads/item/201512/18/20151218165511_AQW4B.jpeg'
-                }
+                // {
+                //     aid:'1',title:'新开普',thump:'http://img5.duitang.com/uploads/item/201512/18/20151218165511_AQW4B.jpeg'
+                // }
             ]
         }
     }
@@ -40,7 +43,11 @@ export default class FlatListDemo03 extends Component{
                         ];
                         Animated.timing(
                             this.state.fadeAnim,//初始值
-                            {toValue: 1}//结束值
+                            {
+                                toValue: 1,
+                                // easing:Easing.back,
+                                // duration:2000
+                            }//结束值
                         ).start();//开始
                         this.setState({
                             list:data

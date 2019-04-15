@@ -22,6 +22,8 @@ import {Platform, StyleSheet, Text, View} from 'react-native';
 import FlatListDemo from './src/comments/FlatListDemo'
 import FlatListDemo02 from './src/comments/FlatListDemo02'
 import FlatListDemo03 from './src/comments/FlatListDemo03'
+import FlatListDemo04 from './src/comments/FlatListDemo04'
+import FlatListDemo05 from './src/comments/FlatListDemo05'
 import AnimationDemo01 from './src/comments/AnimationDemo01'
 import AnimationDemo02 from './src/comments/AnimationDemo02'
 import AnimationDemo03 from './src/comments/AnimationDemo03'
@@ -46,7 +48,7 @@ type Props = {};
 export default class App extends Component<Props> {
   render() {
     return (
-        <FlatListDemo02/>
+        <FlatListDemo/>
     );
   }
 }
