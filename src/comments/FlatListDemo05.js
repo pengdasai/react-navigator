@@ -5,7 +5,7 @@ export default class FlatListDemo03 extends Component{
     constructor(){
         super();
         this.state={
-            currentAlpha: 0,//标志位，记录当前value
+            currentAlpha: 1.0,//标志位，记录当前value
             fadeAnim: new Animated.Value(1.0),//初始透明度
             list:[
                 // {

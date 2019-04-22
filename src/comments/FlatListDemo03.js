@@ -9,11 +9,7 @@ export default class FlatListDemo03 extends Component{
         super();
         this.state={
             fadeAnim: new Animated.Value(0), //设置初始值
-            list:[
-                // {
-                //     aid:'1',title:'新开普',thump:'http://img5.duitang.com/uploads/item/201512/18/20151218165511_AQW4B.jpeg'
-                // }
-            ]
+            list:[]
         }
     }
 
@@ -46,7 +42,7 @@ export default class FlatListDemo03 extends Component{
                             {
                                 toValue: 1,
                                 // easing:Easing.back,
-                                // duration:2000
+                                duration:2000
                             }//结束值
                         ).start();//开始
                         this.setState({

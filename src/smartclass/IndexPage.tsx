@@ -1,14 +1,16 @@
 import * as React from 'react';
-import {View,Text,Dimensions,Image} from "react-native";
+import {View, Text, Dimensions, Image, Button, Alert} from "react-native";
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
+import Exam from '../smartclass/Exam';
+import {string} from "prop-types";
 export default class IndexPage extends React.Component{
 
     constructor(props:string){
         super(props);
         this.state={
-            msg:''
-        }
+            mode:'main',
+        };
     }
 
     render(){
@@ -17,32 +19,33 @@ export default class IndexPage extends React.Component{
                 alignItems:'center',
             }}>
                 {/*最上面*/}
-                <View style={{
-                    flexDirection:'row',
-                    justifyContent:'space-between',
-                    backgroundColor:'pink',
-                    height:height*0.15,
-                    width:width,
-                    borderBottomWidth:6,
-                    borderBottomColor:'#F3F7FA'
-                }}>
-                    <Text style={{fontSize:20,marginLeft:10,marginTop:10}}>2105教室</Text>
-                    <View style={{
-                        marginRight:20,
-                        marginTop:10,
-                        alignItems:'center'
-                    }}>
-                        <Text style={{fontSize:20}}>11:43:46</Text>
-                        <Text>2019年4月10日 星期三</Text>
-                    </View>
-                </View>
+                {/*<View style={{*/}
+                    {/*flexDirection:'row',*/}
+                    {/*justifyContent:'space-between',*/}
+                    {/*backgroundColor:'pink',*/}
+                    {/*height:height*0.15,*/}
+                    {/*width:width,*/}
+                    {/*borderBottomWidth:6,*/}
+                    {/*borderBottomColor:'#F3F7FA'*/}
+                {/*}}>*/}
+                    {/*<Text style={{fontSize:20,marginLeft:10,marginTop:10}}>2105教室</Text>*/}
+                    {/*<View style={{*/}
+                        {/*marginRight:20,*/}
+                        {/*marginTop:10,*/}
+                        {/*alignItems:'center'*/}
+                    {/*}}>*/}
+                        {/*<Text style={{fontSize:20}}>11:43:46</Text>*/}
+                        {/*<Text>2019年4月10日 星期三</Text>*/}
+                    {/*</View>*/}
+                {/*</View>*/}
                 {/*中间*/}
                 <View style={{
                     height:height*0.5,
                     width:width,
                     backgroundColor:'#D1D1D1',
                     flexDirection:'row',
-                    justifyContent:'space-between'
+                    justifyContent:'space-between',
+                    marginTop:2
                 }}>
                     {/*中间左边*/}
                     <View style={{
@@ -174,6 +177,18 @@ export default class IndexPage extends React.Component{
                             查看更多>>>
                         </Text>
                     </View>
+                </View>
+                <View style={{
+                    flexDirection:'row',
+                    alignItems:'center',
+                    marginTop:5
+                }}>
+                    <Button title={'切换模式'} onPress={()=>{
+                        this.setState({
+
+                        })
+                    }}/>
+                    {/*<Text>{this.state.mode}</Text>*/}
                 </View>
             </View>
         )

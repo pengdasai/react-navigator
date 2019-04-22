@@ -11,11 +11,7 @@ export default class FlatListDemo extends Component{
         super();
         this.state={
             btnAnimVal:new Animated.Value(0), //初始值
-            list:[
-                // {
-                //     aid:'1',title:'新开普',thump:'http://img5.duitang.com/uploads/item/201512/18/20151218165511_AQW4B.jpeg'
-                // }
-            ]
+            list:[]
         }
     }
 
@@ -48,14 +44,11 @@ export default class FlatListDemo extends Component{
                             {
                                 aid:'3',title:'新开普',thump:'http://img5.duitang.com/uploads/item/201512/18/20151218165511_AQW4B.jpeg'
                             },
-                            // {
-                            //     aid:'2',title:'新开普',thump:'http://img5.duitang.com/uploads/item/201512/18/20151218165511_AQW4B.jpeg'
-                            // }
                         ];
                         Animated.spring(this.state.btnAnimVal,{
                             // bounciness:8,
                             // speed:12,
-                            toValue:10,//结束值
+                            toValue:20,//结束值
                             friction:2,//摩擦力
                             tension:50,//弹跳速度值
                         }).start();
